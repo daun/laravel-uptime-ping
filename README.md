@@ -1,8 +1,8 @@
 # 📡  Laravel Uptime Ping
 
-A [dead man's switch](https://en.wikipedia.org/wiki/Dead_man%27s_switch) for
-[Laravel](https://laravel.com/docs/11.x/queues) apps.
-Automatically pings an endpoint to communicate that the site is up.
+A **dead man's switch** for Laravel apps that **regularly pings an endpoint** to confirm the site is
+up and its task scheduler is processing important jobs, such as backups and notifications. A missed
+ping indicates issues with the job queue.
 
 Useful with health monitors like [Uptime Kuma](https://uptime.kuma.pet/).
 
@@ -14,10 +14,18 @@ Install the package via composer:
 composer require daun/laravel-uptime-ping
 ```
 
+## How it works
+
+An **uptime ping sent from within the job queue** is the most reliable method for detecting a broken
+job queue. While your site may be running, a misconfigured cron job might prevent your backups and
+notifications from being processed. A standard health check wouldn't necessarily identify this issue.
+
+The package will send a GET request to your configured endpoint every minute. This way, you'll know
+immediately if the site goes down or the job queue stops processing items.
+
 ## Basic setup
 
-Define the URL to ping in your `.env` file, and the package will now send a GET request to that
-URL every minute. For more customization, see below.
+Define the URL to ping in your `.env` file. For more customization, see below.
 
 ```bash
 UPTIME_PING_URL="https://uptime.kuma.instance/api/push/xxxxxxxxxx?status=up&msg=OK&ping="

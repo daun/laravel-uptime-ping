@@ -7,7 +7,8 @@
         "health-check",
         "uptime-monitoring",
         "schedule",
-        "uptime-ping"
+        "uptime-ping",
+        "dead-mans-switch"
     ],
     "authors": [
         {
