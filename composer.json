@@ -1,0 +1,47 @@
+{
+    "name": "daun/laravel-uptime-ping",
+    "description": "Ping an endpoint regularly to monitor uptime and system status.",
+    "license": "MIT",
+    "keywords": [
+        "laravel",
+        "health-check",
+        "uptime-monitoring",
+        "schedule",
+        "uptime-ping"
+    ],
+    "authors": [
+        {
+            "name": "Philipp Daun",
+            "email": "post@philippdaun.net",
+            "homepage": "https://philippdaun.net"
+        }
+    ],
+    "homepage": "https://github.com/daun/laravel-uptime-ping",
+    "require": {
+        "php": "^8.1",
+        "illuminate/support": "^10.0|^11.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.0"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Daun\\LaravelUptimePing\\": "src/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Daun\\LaravelUptimePing\\ServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "format": "vendor/bin/pint"
+    }
+}
