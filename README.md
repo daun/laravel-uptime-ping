@@ -1,8 +1,9 @@
-# Laravel Uptime Ping
+# 📡  Laravel Uptime Ping
 
 A [dead man's switch](https://en.wikipedia.org/wiki/Dead_man%27s_switch) for
 [Laravel](https://laravel.com/docs/11.x/queues) apps.
 Automatically pings an endpoint to communicate that the site is up.
+
 Useful with health monitors like [Uptime Kuma](https://uptime.kuma.pet/).
 
 ## Installation
