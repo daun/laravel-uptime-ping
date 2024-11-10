@@ -20,7 +20,7 @@ class ServiceProvider extends BaseServiceProvider
     {
         $schedule->job(UptimePing::class)
             ->when(config('uptime-ping.url'))
-            ->everyMinute();
+            ->cron(config('uptime-ping.cron', '* * * * *'));
     }
 
     protected function getConfigFile(): string
