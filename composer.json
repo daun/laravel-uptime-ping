@@ -20,10 +20,15 @@
     "homepage": "https://github.com/daun/laravel-uptime-ping",
     "require": {
         "php": "^8.1",
-        "illuminate/support": "^10.0|^11.0"
+        "laravel/framework": "^10.0 || ^11.0"
     },
     "require-dev": {
-        "laravel/pint": "^1.0"
+        "laravel/pint": "^1.0",
+        "mockery/mockery": "^1.6",
+        "orchestra/testbench": "^9.5",
+        "pestphp/pest": "^3.5",
+        "pestphp/pest-plugin": "^3.0",
+        "spatie/laravel-ray": "^1.0"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
@@ -32,7 +37,15 @@
             "Daun\\LaravelUptimePing\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
     "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        },
         "sort-packages": true
     },
     "extra": {
@@ -43,6 +56,7 @@
         }
     },
     "scripts": {
-        "format": "vendor/bin/pint"
+        "format": "vendor/bin/pint",
+        "test": "vendor/bin/pest"
     }
 }

@@ -2,6 +2,7 @@
 .env
 .idea
 .phpunit.result.cache
+.phpunit.cache
 .vscode
 node_modules
 vendor
