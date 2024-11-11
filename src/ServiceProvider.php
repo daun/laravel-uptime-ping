@@ -25,6 +25,6 @@ class ServiceProvider extends BaseServiceProvider
 
     protected function getConfigFile(): string
     {
-        return __DIR__ . '/../config/config.php';
+        return __DIR__.'/../config/config.php';
     }
 }
