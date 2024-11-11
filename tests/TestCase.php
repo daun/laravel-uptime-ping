@@ -3,8 +3,6 @@
 namespace Tests;
 
 use Daun\LaravelUptimePing\ServiceProvider;
-use Illuminate\Config\Repository;
-use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Testing\TestCase as LaravelTestCase;
 use Orchestra\Testbench\Concerns\CreatesApplication;
 
