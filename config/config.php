@@ -2,22 +2,72 @@
 
 return [
 
-    // The URL to ping
+    /*
+    |--------------------------------------------------------------------------
+    | URL
+    |--------------------------------------------------------------------------
+    |
+    | The URL to ping. If this is not set, the job will not run.
+    |
+    */
+
     'url' => env('UPTIME_PING_URL', null),
 
-    // The HTTP method to use
-    'method' => env('UPTIME_PING_METHOD', 'GET'),
+    /*
+    |--------------------------------------------------------------------------
+    | Frequency
+    |--------------------------------------------------------------------------
+    |
+    | The frequency at which to ping the URL, in crontab syntax.
+    |
+    | @see https://crontab.guru for help
+    |
+    */
 
-    // The frequency at which to ping the URL, in crontab syntax (see https://crontab.guru)
     'cron' => env('UPTIME_PING_CRON', '* * * * *'),
 
-    // The number of retries before failing
+    /*
+    |--------------------------------------------------------------------------
+    | HTTP Method
+    |--------------------------------------------------------------------------
+    |
+    | The HTTP method to use when pinging the URL.
+    |
+    */
+
+    'method' => env('UPTIME_PING_METHOD', 'GET'),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Retries
+    |--------------------------------------------------------------------------
+    |
+    | The number of retries to attempt before failing.
+    |
+    */
+
     'retries' => 3,
 
-    // The timeout in seconds before failing
+    /*
+    |--------------------------------------------------------------------------
+    | Timeout
+    |--------------------------------------------------------------------------
+    |
+    | The timeout in seconds before failing.
+    |
+    */
+
     'timeout' => 3,
 
-    // Additional headers to send with the request
+    /*
+    |--------------------------------------------------------------------------
+    | Headers
+    |--------------------------------------------------------------------------
+    |
+    | Additional headers to send with the request.
+    |
+    */
+
     'headers' => [
         // 'User-Agent' => 'Laravel Uptime Ping',
     ],
