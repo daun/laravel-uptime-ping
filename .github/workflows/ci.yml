@@ -39,7 +39,7 @@ jobs:
         with:
           timeout_minutes: 3
           max_attempts: 3
-          command: composer require "laravel/framework:10.*" "orchestra/testbench:^8.21" "pestphp/pest:^2.34" "pestphp/pest-plugin-laravel:^2.3" --no-update --no-interaction
+          command: composer require "laravel/framework:10.*" "orchestra/testbench:^8.0" "pestphp/pest:^2.0" "pestphp/pest-plugin-laravel:^2.0" --no-update --no-interaction
 
       - name: Select Laravel 11
         uses: nick-invision/retry@v3
@@ -47,7 +47,7 @@ jobs:
         with:
           timeout_minutes: 3
           max_attempts: 3
-          command: composer require "laravel/framework:11.*" "orchestra/testbench:^9.0" "pestphp/pest:^2.34" "pestphp/pest-plugin-laravel:^2.3" --no-update --no-interaction
+          command: composer require "laravel/framework:11.*" "orchestra/testbench:^9.0" "pestphp/pest:^3.0" "pestphp/pest-plugin-laravel:^3.0" --no-update --no-interaction
 
       - name: Install PHP Dependencies
         uses: nick-invision/retry@v3

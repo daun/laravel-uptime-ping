@@ -27,8 +27,8 @@
         "laravel/pint": "^1.14",
         "mockery/mockery": "^1.6",
         "orchestra/testbench": "^9.5",
-        "pestphp/pest": "^2.36",
-        "pestphp/pest-plugin-laravel": "^2.4",
+        "pestphp/pest": "^3.5",
+        "pestphp/pest-plugin-laravel": "^3.0",
         "spatie/laravel-ray": "^1.0"
     },
     "minimum-stability": "dev",
