@@ -23,11 +23,13 @@
         "laravel/framework": "^10.0 || ^11.0"
     },
     "require-dev": {
-        "laravel/pint": "^1.0",
+        "guzzlehttp/guzzle": "^7.9",
+        "larastan/larastan": "^2.9",
+        "laravel/pint": "^1.14",
         "mockery/mockery": "^1.6",
         "orchestra/testbench": "^9.5",
         "pestphp/pest": "^3.5",
-        "pestphp/pest-plugin": "^3.0",
+        "pestphp/pest-plugin-laravel": "^3.0",
         "spatie/laravel-ray": "^1.0"
     },
     "minimum-stability": "dev",
@@ -56,7 +58,11 @@
         }
     },
     "scripts": {
-        "format": "vendor/bin/pint",
-        "test": "vendor/bin/pest"
+        "analyse": "./vendor/bin/phpstan analyse --memory-limit=2G",
+        "format": "./vendor/bin/pint",
+        "lint": "./vendor/bin/pint --test",
+        "test": "./vendor/bin/pest",
+        "test:ci": "./vendor/bin/pest --coverage-clover coverage.xml",
+        "test:coverage": "./vendor/bin/pest --coverage"
     }
 }

@@ -1,5 +1,10 @@
 # 📡  Laravel Uptime Ping
 
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/daun/laravel-uptime-ping.svg)](https://packagist.org/packages/daun/laravel-uptime-ping)
+[![Test Status](https://img.shields.io/github/actions/workflow/status/daun/laravel-uptime-ping/ci.yml?label=tests)](https://github.com/daun/laravel-uptime-ping/actions/workflows/ci.yml)
+[![Code Coverage](https://img.shields.io/codecov/c/github/daun/laravel-uptime-ping)](https://app.codecov.io/gh/daun/laravel-uptime-ping)
+[![License](https://img.shields.io/github/license/daun/laravel-uptime-ping.svg)](https://github.com/daun/laravel-uptime-ping/blob/master/LICENSE)
+
 A **dead man's switch** for Laravel apps that **regularly pings an endpoint** to confirm the site is
 up and its task scheduler is processing important jobs, such as backups and notifications. A missed
 ping indicates issues with the job queue.
