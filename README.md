@@ -38,17 +38,53 @@ UPTIME_PING_URL="https://uptime.kuma.instance/api/push/xxxxxxxxxx?status=up&msg=
 
 ## Configuration
 
-To change the frequency of pings, request method, timeout, number of retries, or custom headers,
+To change the frequency of pings, request method, timeout, number of retries, or add custom headers,
 publish and adjust the config file by running `php artisan vendor:publish --tag=uptime-ping-config`.
+Adjust any settings in `config/uptime-ping.php`.
 
 ```php
 return [
+
+    /*
+    | The URL to ping. If this is not set, the job will not run.
+    */
+
     'url' => env('UPTIME_PING_URL', null),
+
+    /*
+    | The frequency at which to ping the URL, in crontab syntax. @see https://crontab.guru for help
+    */
+
+    'cron' => env('UPTIME_PING_CRON', '* * * * *'),
+
+    /*
+    | The HTTP method to use when pinging the URL.
+    */
+
     'method' => env('UPTIME_PING_METHOD', 'GET'),
+
+    /*
+    | The number of retries to attempt before failing.
+    */
+
     'retries' => 3,
+
+    /*
+    | The timeout in seconds before failing.
+    */
+
     'timeout' => 3,
-    'headers' => [],
+
+    /*
+    | Additional headers to send with the request.
+    */
+
+    'headers' => [
+        // 'User-Agent' => 'Laravel Uptime Ping',
+    ],
+
 ];
+
 ```
 
 ## License
