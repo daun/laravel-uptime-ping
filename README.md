@@ -33,9 +33,8 @@ UPTIME_PING_URL="https://uptime.kuma.instance/api/push/xxxxxxxxxx?status=up&msg=
 
 ## Configuration
 
-If you need to change the request method, adjust the timeout and number of retries, or add custom
-headers, publish and adjust the config file by running
-`php artisan vendor:publish --tag=laravel-uptime-ping`.
+To change the frequency of pings, request method, timeout, number of retries, or custom headers,
+publish and adjust the config file by running `php artisan vendor:publish --tag=uptime-ping-config`.
 
 ```php
 return [
