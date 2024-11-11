@@ -10,10 +10,9 @@ class ServiceProvider extends BaseServiceProvider
 {
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'uptime-ping');
-
+        $this->mergeConfigFrom($this->getConfigFile(), 'uptime-ping');
         if ($this->app->runningInConsole()) {
-            $this->publishes([__DIR__.'/../config/config.php' => config_path('uptime-ping.php')], 'uptime-ping-config');
+            $this->publishes([$this->getConfigFile() => config_path('uptime-ping.php')], 'uptime-ping-config');
         }
     }
 
@@ -21,6 +20,11 @@ class ServiceProvider extends BaseServiceProvider
     {
         $schedule->job(UptimePing::class)
             ->when(config('uptime-ping.url'))
-            ->everyMinute();
+            ->cron(config('uptime-ping.cron', '* * * * *'));
+    }
+
+    protected function getConfigFile(): string
+    {
+        return __DIR__.'/../config/config.php';
     }
 }
