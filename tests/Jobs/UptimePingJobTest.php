@@ -8,6 +8,10 @@ beforeEach(function () {
     Http::fake();
 });
 
+it('locks unique job for 60 seconds', function () {
+    expect((new UptimePing)->uniqueFor())->toBe(60);
+});
+
 it('does not send request if url is not configured', function () {
     Config::set('uptime-ping.url', null);
 
