@@ -28,8 +28,8 @@
         "laravel/pint": "^1.0",
         "mockery/mockery": "^1.6",
         "orchestra/testbench": "^10.0",
-        "pestphp/pest-plugin-laravel": "^3.0",
-        "pestphp/pest": "^3.0"
+        "pestphp/pest": "^3.0",
+        "pestphp/pest-plugin-laravel": "^3.0"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
