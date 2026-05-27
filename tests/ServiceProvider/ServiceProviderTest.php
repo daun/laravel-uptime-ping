@@ -1,6 +1,5 @@
 <?php
 
-use Daun\LaravelUptimePing\Jobs\UptimePing;
 use Illuminate\Console\Scheduling\Schedule;
 
 it('adds a new job to the queue', function () {
