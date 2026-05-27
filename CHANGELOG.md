@@ -1,6 +1,9 @@
 # Changelog
 
-All notable changes to this package will be documented in this file.
+## [2.0.0] - 2026-05-27
+
+- Add support for Laravel 13
+- Remove support for Laravel 10 and 11
 
 ## [1.2.0] - 2025-03-06
 
@@ -14,6 +17,7 @@ All notable changes to this package will be documented in this file.
 
 - Initial release 🎉
 
+[2.0.0]: https://github.com/daun/laravel-uptime-ping/releases/tag/2.0.0
 [1.2.0]: https://github.com/daun/laravel-uptime-ping/releases/tag/1.2.0
 [1.1.0]: https://github.com/daun/laravel-uptime-ping/releases/tag/1.1.0
 [1.0.0]: https://github.com/daun/laravel-uptime-ping/releases/tag/1.0.0
