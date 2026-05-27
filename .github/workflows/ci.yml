@@ -15,12 +15,6 @@ jobs:
         php: [8.2, 8.3, 8.4, 8.5]
         laravel: [12.*, 13.*]
         include:
-          - laravel: 10.*
-            testbench: 8.*
-            pest: 2.*
-          - laravel: 11.*
-            testbench: 9.*
-            pest: 3.*
           - laravel: 12.*
             testbench: 10.*
             pest: 3.*
