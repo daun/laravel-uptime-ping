@@ -87,6 +87,10 @@ return [
 
 ```
 
+## Failure handling
+
+The primary signal is the absence of a ping on the receiver side: your monitoring solution raises an alert because no push arrived). This is complemented on the sender side by also failing loudly when a ping cannot be delivered: the queued job will be marked as failed when the endpoint cannot be reached or returns a non-2xx status.
+
 ## License
 
 [MIT](https://opensource.org/licenses/MIT)
