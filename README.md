@@ -73,7 +73,7 @@ return [
     | The timeout in seconds before failing.
     */
 
-    'timeout' => 3,
+    'timeout' => 5,
 
     /*
     | Additional headers to send with the request.
